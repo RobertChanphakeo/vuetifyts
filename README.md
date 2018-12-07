@@ -1,4 +1,4 @@
-# SPA Template for ASP.NET Core 2.1 with VueJS and TypeScript
+# SPA Template for ASP.NET Core 2.1 with VueJS, Vuetify and TypeScript
 
 This is a modified template based upon official Microsoft.AspNetCore.SpaTemplate::*
 
@@ -7,6 +7,7 @@ This is a modified template based upon official Microsoft.AspNetCore.SpaTemplate
 - Migrated to .Net Core 2.1
 - Updated NPM packages
 - Updated to WebPack 4
+- Added Vuetify
 - Added Serilog
 
 Other than that it has minor changes to VueJS original files.

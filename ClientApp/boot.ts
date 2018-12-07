@@ -1,8 +1,12 @@
 import './css/site.css';
-import 'bootstrap';
+import './stylus/main.styl';
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Vuetify from 'vuetify';
+
 Vue.use(VueRouter);
+Vue.use(Vuetify);
 
 const routes = [
     { path: '/', component: require('./components/home/home.vue.html').default },
