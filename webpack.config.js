@@ -10,6 +10,7 @@ module.exports = (env) => {
     const devMode = isDevBuild ? 'development':'production';
 
     return [{
+        devtool: "source-map",
         mode: devMode,
         stats: { modules: false },
         context: __dirname,
