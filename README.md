@@ -9,6 +9,8 @@ This is a modified template based upon official Microsoft.AspNetCore.SpaTemplate
 - Updated to WebPack 4
 - Added Vuetify
 - Added Serilog
+- Removed bootstrap
+- Removed jQuery
 
 Other than that it has minor changes to VueJS original files.
 

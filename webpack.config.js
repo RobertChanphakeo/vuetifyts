@@ -17,17 +17,10 @@ module.exports = (env) => {
         entry: { 'main': './ClientApp/boot.ts' },
         module: {
             rules: [
-                { test: /\.vue\.html$/, include: /ClientApp/, loader: 'vue-loader', options: { loaders: { js: 'ts-loader' } } },
-                { test: /\.ts$/, include: /ClientApp/, use: [
-                    {
-                        loader: 'ts-loader',
-                        options: {
-                            appendTsSuffixTo: [/\.vue\.html$/]
-                        }
-                    }
-                ] },
-                { test: /\.css$/, use: isDevBuild ? [ 'style-loader', 'css-loader' ] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
-				{ test: /\.styl$/, use: isDevBuild ? ['style-loader', 'css-loader', 'stylus-loader'] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
+                { test: /\.vue$/, include: /ClientApp/, loader: 'vue-loader', options: { loaders: { js: 'ts-loader' } } },
+                { test: /\.ts$/, include: /ClientApp/, use: [{ loader: 'ts-loader', options: { appendTsSuffixTo: [/\.vue$/] } }] },
+                { test: /\.css$/, use: isDevBuild ? ['style-loader', 'css-loader'] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
+                { test: /\.styl$/, use: isDevBuild ? ['style-loader', 'css-loader', 'stylus-loader'] : ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' }
             ]
         },
